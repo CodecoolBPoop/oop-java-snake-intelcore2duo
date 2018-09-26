@@ -60,7 +60,7 @@ public class SnakeHead extends GameEntity implements Animatable {
         if (isOutOfBounds() || health <= 0) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("\t\t\tGame Over");
-            alert.setHeaderText("Your score is: " + (snakeLength / 4));
+            alert.setHeaderText("Your score is: " + (snakeLength / 4) + " \nYour health:  " + health);
             alert.setContentText("Press F12 to restart the game");
             System.out.println("Game Over" + snakeLength);
             alert.show();
