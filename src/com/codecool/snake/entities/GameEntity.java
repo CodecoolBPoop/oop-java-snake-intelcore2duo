@@ -14,7 +14,6 @@ public abstract class GameEntity extends ImageView {
         // add to the main loop.
         Globals.addGameObject(this);
     }
-
     public void destroy() {
         if (getParent() != null) {
             pane.getChildren().remove(this);
