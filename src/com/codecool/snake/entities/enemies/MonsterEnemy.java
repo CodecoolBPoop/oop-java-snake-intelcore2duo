@@ -21,7 +21,7 @@ public class MonsterEnemy extends GameEntity implements Animatable, Interactable
 
         setImage(Globals.monsterEnemy);
         pane.getChildren().add(this);
-        int speed = 1;
+        int speed = 2;
         Random rnd = new Random();
         setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);
         setY(rnd.nextDouble() * Globals.WINDOW_HEIGHT);

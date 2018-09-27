@@ -43,14 +43,14 @@ public class CodeUp extends GameEntity implements Animatable, Interactable {
 
     @Override
     public void apply(SnakeHead snakeHead) {
-        snakeHead.addPart(4);
         snakeHead.changeHealth(10);
+        snakeHead.changeSpeed(1);
         destroy();
         new CodeUp(pane);
     }
 
     @Override
     public String getMessage() {
-        return "You get 10 LP";
+        return "You get 10 HP";
     }
 }
