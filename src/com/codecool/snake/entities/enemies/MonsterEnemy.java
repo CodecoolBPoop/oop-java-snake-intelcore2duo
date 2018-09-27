@@ -43,7 +43,7 @@ public class MonsterEnemy extends GameEntity implements Animatable, Interactable
 
     @Override
     public void apply(SnakeHead player) {
-        player.removePart(4);
+        player.changeHealth(-damage);
         destroy();
         new MonsterEnemy(pane);
     }
