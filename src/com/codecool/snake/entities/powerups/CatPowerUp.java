@@ -24,6 +24,7 @@ public class CatPowerUp extends GameEntity implements Interactable {
     public void apply(SnakeHead snakeHead) {
         snakeHead.changeHealth(20);
         destroy();
+        new CatPowerUp(pane);
     }
 
     @Override
