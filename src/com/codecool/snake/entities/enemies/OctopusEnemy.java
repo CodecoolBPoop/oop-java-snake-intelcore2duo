@@ -44,6 +44,7 @@ public class OctopusEnemy extends GameEntity implements Animatable, Interactable
     public void apply(SnakeHead player) {
         player.changeHealth(-damage);
         destroy();
+        new OctopusEnemy(pane);
     }
 
     @Override

@@ -1,18 +1,20 @@
 package com.codecool.snake.entities.powerups;
 
-import com.codecool.snake.entities.GameEntity;
 import com.codecool.snake.Globals;
+import com.codecool.snake.entities.GameEntity;
 import com.codecool.snake.entities.Interactable;
+import com.codecool.snake.entities.enemies.SimpleEnemy;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.scene.layout.Pane;
 
 import java.util.Random;
 
-public class CatPowerUp extends GameEntity implements Interactable {
+// a simple powerup that makes the snake grow TODO make other powerups
+public class CodePowerUp extends GameEntity implements Interactable {
 
-    public CatPowerUp(Pane pane) {
+    public CodePowerUp(Pane pane) {
         super(pane);
-        setImage(Globals.codeUp);
+        setImage(Globals.powerupCode);
         pane.getChildren().add(this);
 
         Random rnd = new Random();
@@ -22,9 +24,10 @@ public class CatPowerUp extends GameEntity implements Interactable {
 
     @Override
     public void apply(SnakeHead snakeHead) {
-        snakeHead.changeHealth(20);
+        snakeHead.addPart(2);
         destroy();
-        new CatPowerUp(pane);
+        new CodePowerUp(pane);
+        new SimpleEnemy(pane);
     }
 
     @Override

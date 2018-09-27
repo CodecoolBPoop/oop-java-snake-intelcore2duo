@@ -14,13 +14,14 @@ public class Globals {
     public static final double WINDOW_WIDTH = 1000;
     public static final double WINDOW_HEIGHT = 700;
 
-    public static Image snakeHead = new Image("snake_head.png");
-    public static Image snakeBody = new Image("snake_body.png");
+    public static Image snakeHead = new Image("rsz_cookie_monster.png");
+    public static Image snakeBody = new Image("rsz_cookie_monster.png");
     public static Image simpleEnemy = new Image("simple_enemy.png");
     public static Image powerupBerry = new Image("powerup_berry.png");
     public static Image octopusEnemy = new Image("octopus_enemy.png");
     public static Image monsterEnemy = new Image("monster_enemy.png");
-    public static Image catPowerUp = new Image("rsz_cica.png");
+    public static Image powerupCode = new Image("power_up_cc.png");
+    public static Image codeUp = new Image("cookie_up.png");
     //.. put here the other images you want to use
 
     public static boolean leftKeyDown;
