@@ -36,6 +36,7 @@ public class SimpleEnemy extends GameEntity implements Animatable, Interactable 
     public void step() {
         if (isOutOfBounds()) {
             destroy();
+            new SimpleEnemy(pane);
         }
         setX(getX() + heading.getX());
         setY(getY() + heading.getY());

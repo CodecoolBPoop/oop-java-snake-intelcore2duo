@@ -21,7 +21,7 @@ public class MonsterEnemy extends GameEntity implements Animatable, Interactable
 
         setImage(Globals.monsterEnemy);
         pane.getChildren().add(this);
-        int speed = 2;
+        int speed = 0;
         Random rnd = new Random();
         setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);
         setY(rnd.nextDouble() * Globals.WINDOW_HEIGHT);
@@ -35,6 +35,7 @@ public class MonsterEnemy extends GameEntity implements Animatable, Interactable
     public void step() {
         if (isOutOfBounds()) {
             destroy();
+            new MonsterEnemy(pane);
         }
         setX(getX() + heading.getX());
         setY(getY() + heading.getY());
@@ -42,7 +43,7 @@ public class MonsterEnemy extends GameEntity implements Animatable, Interactable
 
     @Override
     public void apply(SnakeHead player) {
-        player.changeHealth(-damage);
+        player.removePart(4);
         destroy();
         new MonsterEnemy(pane);
     }

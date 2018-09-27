@@ -35,6 +35,7 @@ public class OctopusEnemy extends GameEntity implements Animatable, Interactable
     public void step() {
         if (isOutOfBounds()) {
             destroy();
+            new OctopusEnemy(pane);
         }
         setX(getX() + heading.getX());
         setY(getY() + heading.getY());
